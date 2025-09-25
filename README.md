@@ -4,8 +4,6 @@ Rust VSCode 模板
 
 ---
 
-## 中文简介
-
 **Rust VSCode 模板** 是一个开箱即用的 Rust 项目模板，专为 VSCode 开发环境设计，包含完整的开发工具链、调试配置和现代单元测试工具。
 
 ### 特性
@@ -21,27 +19,6 @@ Rust VSCode 模板
 
 适合新建 Rust 项目，快速开始开发，保证代码规范、调试顺畅、测试可用。
 
----
-
-## English Introduction
-
-**Rust VSCode Template** is a ready-to-use Rust project template designed for VSCode development. It comes with a complete toolchain, debugging setup, and modern testing workflow.
-
-### Features
-
-- Automatically run **Clippy** on save to enforce code style
-- Auto **rustfmt** formatting
-- **Error Lens** highlights errors and warnings
-- **Nextest** testing integration (supports full or single test)
-- **LLDB** debugging configuration with step-by-step support
-- Preloaded dependencies: `serde`, `log`, `env_logger`
-- VSCode configuration ready-to-use: theme, icon pack, terminal environment
-
-### Use Case
-
-Ideal for initializing new Rust projects, ensuring code quality, smooth debugging, and ready-to-use testing setup.
-
----
 
 ## 安装和环境配置 / Installation & Environment Setup
 
