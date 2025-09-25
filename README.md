@@ -1,4 +1,4 @@
-# {{project-name}}
+Rust VSCode 模板
 
 开箱即用 Rust VSCode 模板 / Ready-to-use Rust VSCode Template
 
@@ -16,7 +16,6 @@
 - **Nextest** 单测集成（支持全部/单个测试）
 - **LLDB** 调试配置，支持单步调试
 - 初始依赖：`serde`、`log`、`env_logger`
-- VSCode 配置开箱即用：主题、图标、终端环境
 
 ### 使用场景
 
@@ -64,6 +63,7 @@ cargo install cargo-nextest
 code --install-extension rust-lang.rust-analyzer
 code --install-extension usernamehw.errorlens
 code --install-extension joshpeng.dependee
+//主题可选
 code --install-extension PKief.material-icon-theme
 code --install-extension zhuangtongfa.material-theme
 
@@ -93,8 +93,6 @@ cargo generate --git https://github.com/dayuqichengbao/rust-template.git --name 
     ```
 
 ## VSCode 配置说明 / VSCode Settings
-
-- 主题 & 图标：One Dark Pro + Material Icon Theme
 
 - 自动格式化：editor.formatOnSave
 
