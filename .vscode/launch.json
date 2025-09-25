@@ -1,0 +1,14 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug Nextest (all)",
+            "type": "lldb",
+            "request": "launch",
+            "program": "${workspaceFolder}/target/debug/{{project-name}}",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "preLaunchTask": "Nextest: Run All Tests"
+        }
+    ]
+}

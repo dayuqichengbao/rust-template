@@ -1,0 +1,32 @@
+{
+    // ----------------------------
+    // 编辑器行为
+    // ----------------------------
+    "editor.formatOnSave": true, // 保存时格式化代码
+    "editor.rulers": [
+        100
+    ], // 右边参考线，防止代码太长
+    "editor.tabSize": 4, // Rust 官方推荐缩进 4
+    "files.trimTrailingWhitespace": true, // 自动去除行尾空格
+    "files.insertFinalNewline": true, // 文件末尾加换行符（符合 Unix 习惯）
+    // ----------------------------
+    // Rust Analyzer 设置
+    // ----------------------------
+    "rust-analyzer.checkOnSave.command": "clippy", // 保存自动运行 Clippy（包含类型检查）
+    "rust-analyzer.procMacro.enable": true, // 启用宏展开
+    "rust-analyzer.cargo.loadOutDirsFromCheck": true, // 加快依赖分析速度
+    // ----------------------------
+    // Error Lens 设置（高亮错误和警告）https://github.com/karlsander/vscode-error-lens
+    // ----------------------------
+    "errorLens.enabled": true,
+    "errorLens.fontSize": "12px",
+    "errorLens.errorBackground": "#ffcccc33",
+    "errorLens.warningBackground": "#fff2cc33",
+    "errorLens.infoBackground": "#cce5ff33",
+    // ----------------------------
+    // 终端默认配置
+    // ----------------------------
+    "terminal.integrated.defaultProfile.windows": "PowerShell",
+    "terminal.integrated.defaultProfile.linux": "bash",
+    "terminal.integrated.defaultProfile.osx": "zsh"
+}
