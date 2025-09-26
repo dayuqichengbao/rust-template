@@ -31,7 +31,7 @@
     // 保存文件时自动运行 cargo clippy（替代默认的 cargo check）。
     // clippy 比 check 更严格，可以帮你早点发现潜在 bug/坏习惯。
     // 建议开发时开启，写小 demo 可以关掉。
-    "rust-analyzer.checkOnSave.command": "clippy",
+    "rust-analyzer.check.command": "clippy",
     // =====================
     // 内联提示（Inlay Hints）
     // =====================
