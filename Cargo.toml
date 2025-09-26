@@ -6,7 +6,7 @@ edition = "2021"
 [dependencies]
 serde = { version = "1.0", features = ["derive"] }
 log = "0.4"
-env_logger = "0.11.8"
+env_logger = "0.10.0"
 
 [dev-dependencies]
 # 注意：Nextest 不需要写这里，安装 cargo-nextest 工具即可

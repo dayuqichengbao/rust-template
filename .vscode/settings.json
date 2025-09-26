@@ -12,17 +12,52 @@
     // ----------------------------
     // Rust Analyzer 设置
     // ----------------------------
-    "rust-analyzer.checkOnSave.command": "clippy", // 保存自动运行 Clippy（包含类型检查）
-    "rust-analyzer.procMacro.enable": true, // 启用宏展开
-    "rust-analyzer.cargo.loadOutDirsFromCheck": true, // 加快依赖分析速度
+    // =====================
+    // Cargo 相关
+    // =====================
+    // 让 rust-analyzer 识别 build.rs 生成的代码（例如 prost/tonic/bindgen）。
+    // 没有这个配置，生成的模块可能会显示未定义。
+    "rust-analyzer.cargo.buildScripts.enable": true,
+    // 默认启用所有 Cargo feature。
+    // 避免因为没有显式指定 feature 导致补全缺失或报错。
+    // 可选值:
+    //   "all"  -> 打开全部 feature
+    //   "none" -> 全关
+    //   ["feat1", "feat2"] -> 只开指定的
+    "rust-analyzer.cargo.features": "all",
+    // =====================
+    // 检查 & Lint
+    // =====================
+    // 保存文件时自动运行 cargo clippy（替代默认的 cargo check）。
+    // clippy 比 check 更严格，可以帮你早点发现潜在 bug/坏习惯。
+    // 建议开发时开启，写小 demo 可以关掉。
+    "rust-analyzer.checkOnSave.command": "clippy",
+    // =====================
+    // 内联提示（Inlay Hints）
+    // =====================
+    // 类型提示：在 let x = ... 时自动显示推导出的类型。
+    // 适合学习阶段或快速看懂复杂表达式。
+    "rust-analyzer.inlayHints.typeHints.enable": true,
+    // 参数提示：在函数调用时显示参数名，例如 foo(a: ..., b: ...)。
+    // 对不熟悉的函数调用特别有帮助。
+    "rust-analyzer.inlayHints.parameterHints.enable": true,
+    // 方法链提示：对链式调用（builder 模式）显示中间类型。
+    // 方便理解长链式调用返回的类型。
+    "rust-analyzer.inlayHints.chainingHints.enable": true,
     // ----------------------------
     // Error Lens 设置（高亮错误和警告）https://github.com/karlsander/vscode-error-lens
     // ----------------------------
     "errorLens.enabled": true,
     "errorLens.fontSize": "12px",
-    "errorLens.errorBackground": "#ffcccc33",
-    "errorLens.warningBackground": "#fff2cc33",
-    "errorLens.infoBackground": "#cce5ff33",
+    "workbench.colorCustomizations": {
+        "errorLens.errorBackground": "#ffcccc33",
+        "errorLens.warningBackground": "#fff2cc33",
+        "errorLens.infoBackground": "#cce5ff33",
+        // 有些版本是这些：
+        "errorLens.errorMessageBackground": "#ffcccc33",
+        "errorLens.warningMessageBackground": "#fff2cc33",
+        "errorLens.infoMessageBackground": "#cce5ff33"
+    },
     // ----------------------------
     // 终端默认配置
     // ----------------------------
