@@ -9,6 +9,15 @@
             "args": [],
             "cwd": "${workspaceFolder}",
             "preLaunchTask": "Nextest: Run All Tests"
+        },
+        {
+            "name": "Debug Rust Program",
+            "type": "lldb",
+            "request": "launch",
+            "program": "${workspaceFolder}/target/debug/my_project", // 替换为你的程序名称
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "preLaunchTask": "rust: cargo build", // 确保在调试前构建程序
         }
     ]
 }
