@@ -7,6 +7,16 @@
             "request": "launch",
             "program": "${workspaceFolder}/target/debug/{{project-name}}",
             "args": [],
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin",
+                    "debug_demo"
+                ],
+                "filter": {
+                    "kind": "bin"
+                }
+            },
             "cwd": "${workspaceFolder}",
             "preLaunchTask": "Nextest: Run All Tests"
         },
