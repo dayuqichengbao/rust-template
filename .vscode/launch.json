@@ -11,7 +11,7 @@
                 "args": [
                     "build",
                     "--bin",
-                    "debug_demo"
+                    "{{project-name}}"
                 ],
                 "filter": {
                     "kind": "bin"
